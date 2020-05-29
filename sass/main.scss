@@ -1,0 +1,269 @@
+@import '../libs/reset.scss';
+
+/***  VARIABLE  ***/
+
+/* color base */
+
+$color-primary: #fff;
+$color-secondary: #579c87;
+$color-link: #f3c74a;
+
+/* color menu 1 */
+$color-menu-1-bg:#fcdfdb;
+$color-menu-1-text:#3b1519;
+/* color menu 2 */
+$color-menu-2-bg:#fff5fe;
+$color-menu-2-text:#c77529;
+$color-menu-2-2-text:#a86698;
+$color-menu-2-3-text:#6a56a5;
+$color-menu-2-gradient-start:$color-menu-2-text;
+$color-menu-2-gradient-end:$color-menu-2-3-text;
+/* color menu 3 */
+$color-menu-3-bg:#faf9f8;
+$color-menu-3-text:#215de9;
+$color-menu-3-3-text:#0887fb;
+$color-menu-3-gradient-start:$color-menu-3-text;
+$color-menu-3-gradient-end:$color-menu-3-3-text;
+/* color menu 4 */
+$color-menu-4-bg:#fdfffd;
+$color-menu-4-text:#76c158;
+$color-menu-4-gradient-start:$color-menu-4-text;
+$color-menu-4-gradient-end:#c2db76;
+
+
+/* BASE */
+body{
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: $color-primary;
+}
+a{
+    text-decoration: none;
+}
+li{
+    padding-top: 18px;
+}
+
+/* TYPO */
+h2{
+    font-size: 18px;
+    line-height: 2;
+}
+h3{
+    padding-top: 18px;
+    font-size: 28px;
+    line-height: 1.5;
+}
+p{
+    padding-top: 16px;
+}
+
+/* header */
+.header {
+    background-color: $color-secondary;
+    &__heading {
+        padding: 0.2em;
+        text-align: center;
+        font-size: 34px;
+        font-weight: 800;
+    }
+    &__heading--link {
+         color: $color-link;
+    }
+}
+
+/* CONTAINER */
+.container {
+    width: 100%;
+}
+
+/* article */
+article {
+    width: 90%;
+    margin: 3em auto 4em;
+    text-align: justify;
+    &__section{
+        padding-bottom: 2em;
+    }
+}
+
+/* footer */
+.footer {
+    width: 100%;
+    padding: 0.5em 0;
+    left: 0;
+    bottom: 0;
+    @extend .header;
+    &__infos{
+        padding: 0 2em 0.2em;
+        font-size: 16px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__infos--link a{
+        color: $color-link;
+    }
+}
+
+/* compenent btn */
+
+.btn {
+    text-align: center;
+    margin-bottom: 6em;
+    &--soon{
+        position: relative;
+        margin: 0 auto;
+        padding: 0.5em 3.5em 0.5em 3.5em;
+        opacity: 0.9;
+        font-size: 20px;
+        color: $color-link;
+        @extend .header; //Extend color and background
+        border-radius: 0.4em;
+    }
+}
+
+/* Page home */
+
+.nav-card{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+    margin: 0 auto;
+    padding: 5em;
+    width: 100%;
+    height: auto;
+
+    &__item{
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+        width: 45%;
+        height: 80vmin;
+        margin: 2em auto;
+        text-align: center;
+        overflow: hidden;
+        border-radius: 0.3em;
+        box-shadow: 0 0 10px 0 rgba(152, 153, 151, 0.6);
+
+        &:hover{
+            box-shadow: 0 0 10px 0 rgba(152, 153, 151, 1);
+        }
+        &--link{
+            position: absolute;
+            top:50%;
+            left:50%;
+            opacity: 1;
+            transform: translate(-50%, -50%);
+        }
+        &--subtitle{
+            font-size: 24px;
+            line-height: 1.4;
+        }
+        &--menu-1{
+            background-color: $color-menu-1-bg;
+            .nav-card__item--title,
+            .nav-card__item--subtitle {
+                color: $color-menu-1-text;
+
+            }
+            .nav-card__item--title{
+                font-family: 'Devonshire';
+            }
+            .nav-card__item--subtitle {
+                font-family: 'Tillana';
+                text-transform: uppercase;
+            }
+            .nav-card__item--img{
+                width: 45px;
+                background-color: #f04c5f;
+            }
+       }
+      &--menu-2 {
+            background-color: $color-menu-2-bg;
+            .nav-card__item--title {
+                font-family: 'Croissant One';
+                font-size: 18px;
+                color: $color-menu-2-text;
+                background: linear-gradient(
+                    to right,
+                    $color-menu-2-gradient-start 0%,
+                    $color-menu-2-gradient-end 100%
+                );
+               -webkit-text-fill-color:transparent;
+               -webkit-background-clip: text;
+            }
+            .nav-card__item--subtitle{
+                font-family: 'Libre Baskerville';
+                color: $color-menu-2-text;
+            }
+      }
+      &--menu-3 {
+           background-color: $color-menu-3-bg;
+           .nav-card__item--title{
+               font-family: 'Parisienne';
+               color:$color-menu-3-text;
+               background-color: linear-gradient(
+                   to right,
+                   $color-menu-3-gradient-start 0%,
+                   $color-menu-3-gradient-end 100%
+               );
+               
+        }
+        .nav-card__item--subtitle {
+            font-family: 'Tillana';
+            color: $color-menu-3-3-text;
+        }
+      }
+      &--menu-4{
+          background: $color-menu-3-bg;
+          .nav-card__item--title{
+              font-family: 'Kaushan Script';
+              color: $color-menu-4-text;
+              background: linear-gradient(
+                  to right,
+                  $color-menu-4-gradient-start 0%,
+                  $color-menu-4-gradient-end 100%
+              );
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+          }
+          .nav-card__item--subtitle {
+              font-family: 'Tillana';
+              color: $color-menu-4-text;
+          }
+      } 
+    }
+      
+}
+
+/* PAGE MENUS */
+.menu__section {
+    margin-top: 2em;
+    text-align: center;
+    &--title {
+        font-weight: 700;
+    }
+}
+.menu-card {
+    display: flex;
+    flex-direction: column;
+    margin: 2em auto 8em;
+    padding: 2em;
+    width: 90%;
+    box-shadow: 0 0 10px 0 rgba(152,153,151,0.6);
+
+    &-menu-1{
+        font-family: 'Kalam';
+        color: $color-menu-1-text;
+        background-color: $color-menu-1-bg;
+    }
+    .menu-card__header{
+        font-family: 'Devonshire';
+    }
+    .menu-table__items--list{
+            font-weight: 700;
+        }        
+}

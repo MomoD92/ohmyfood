@@ -1,0 +1,329 @@
+/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
+html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+button, input, select, textarea {
+  margin: 0;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+img, video {
+  height: auto;
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td, th {
+  padding: 0;
+}
+
+td:not([align]), th:not([align]) {
+  text-align: left;
+}
+
+/***  VARIABLE  ***/
+/* color base */
+/* color menu 1 */
+/* color menu 2 */
+/* color menu 3 */
+/* color menu 4 */
+/* BASE */
+body {
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: #fff;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  padding-top: 18px;
+}
+
+/* TYPO */
+h2 {
+  font-size: 18px;
+  line-height: 2;
+}
+
+h3 {
+  padding-top: 18px;
+  font-size: 28px;
+  line-height: 1.5;
+}
+
+p {
+  padding-top: 16px;
+}
+
+/* header */
+.header, .footer, .btn--soon {
+  background-color: #579c87;
+}
+
+.header__heading {
+  padding: 0.2em;
+  text-align: center;
+  font-size: 34px;
+  font-weight: 800;
+}
+
+.header__heading--link {
+  color: #f3c74a;
+}
+
+/* CONTAINER */
+.container {
+  width: 100%;
+}
+
+/* article */
+article {
+  width: 90%;
+  margin: 3em auto 4em;
+  text-align: justify;
+}
+
+article__section {
+  padding-bottom: 2em;
+}
+
+/* footer */
+.footer {
+  width: 100%;
+  padding: 0.5em 0;
+  left: 0;
+  bottom: 0;
+}
+
+.footer__infos {
+  padding: 0 2em 0.2em;
+  font-size: 16px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer__infos--link a {
+  color: #f3c74a;
+}
+
+/* compenent btn */
+.btn {
+  text-align: center;
+  margin-bottom: 6em;
+}
+
+.btn--soon {
+  position: relative;
+  margin: 0 auto;
+  padding: 0.5em 3.5em 0.5em 3.5em;
+  opacity: 0.9;
+  font-size: 20px;
+  color: #f3c74a;
+  border-radius: 0.4em;
+}
+
+/* Page home */
+.nav-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+  margin: 0 auto;
+  padding: 5em;
+  width: 100%;
+  height: auto;
+}
+
+.nav-card__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  position: relative;
+  width: 45%;
+  height: 80vmin;
+  margin: 2em auto;
+  text-align: center;
+  overflow: hidden;
+  border-radius: 0.3em;
+  -webkit-box-shadow: 0 0 10px 0 rgba(152, 153, 151, 0.6);
+          box-shadow: 0 0 10px 0 rgba(152, 153, 151, 0.6);
+}
+
+.nav-card__item:hover {
+  -webkit-box-shadow: 0 0 10px 0 #989997;
+          box-shadow: 0 0 10px 0 #989997;
+}
+
+.nav-card__item--link {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  opacity: 1;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.nav-card__item--subtitle {
+  font-size: 24px;
+  line-height: 1.4;
+}
+
+.nav-card__item--menu-1 {
+  background-color: #fcdfdb;
+}
+
+.nav-card__item--menu-1 .nav-card__item--title,
+.nav-card__item--menu-1 .nav-card__item--subtitle {
+  color: #3b1519;
+}
+
+.nav-card__item--menu-1 .nav-card__item--title {
+  font-family: 'Devonshire';
+}
+
+.nav-card__item--menu-1 .nav-card__item--subtitle {
+  font-family: 'Tillana';
+  text-transform: uppercase;
+}
+
+.nav-card__item--menu-1 .nav-card__item--img {
+  width: 45px;
+  background-color: #f04c5f;
+}
+
+.nav-card__item--menu-2 {
+  background-color: #fff5fe;
+}
+
+.nav-card__item--menu-2 .nav-card__item--title {
+  font-family: 'Croissant One';
+  font-size: 18px;
+  color: #c77529;
+  background: -webkit-gradient(linear, left top, right top, from(#c77529), to(#6a56a5));
+  background: linear-gradient(to right, #c77529 0%, #6a56a5 100%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.nav-card__item--menu-2 .nav-card__item--subtitle {
+  font-family: 'Libre Baskerville';
+  color: #c77529;
+}
+
+.nav-card__item--menu-3 {
+  background-color: #faf9f8;
+}
+
+.nav-card__item--menu-3 .nav-card__item--title {
+  font-family: 'Parisienne';
+  color: #215de9;
+  background-color: linear-gradient(to right, #215de9 0%, #0887fb 100%);
+}
+
+.nav-card__item--menu-3 .nav-card__item--subtitle {
+  font-family: 'Tillana';
+  color: #0887fb;
+}
+
+.nav-card__item--menu-4 {
+  background: #faf9f8;
+}
+
+.nav-card__item--menu-4 .nav-card__item--title {
+  font-family: 'Kaushan Script';
+  color: #76c158;
+  background: -webkit-gradient(linear, left top, right top, from(#76c158), to(#c2db76));
+  background: linear-gradient(to right, #76c158 0%, #c2db76 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.nav-card__item--menu-4 .nav-card__item--subtitle {
+  font-family: 'Tillana';
+  color: #76c158;
+}
+
+/* PAGE MENUS */
+.menu__section {
+  margin-top: 2em;
+  text-align: center;
+}
+
+.menu__section--title {
+  font-weight: 700;
+}
+
+.menu-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 2em auto 8em;
+  padding: 2em;
+  width: 90%;
+  -webkit-box-shadow: 0 0 10px 0 rgba(152, 153, 151, 0.6);
+          box-shadow: 0 0 10px 0 rgba(152, 153, 151, 0.6);
+}
+
+.menu-card-menu-1 {
+  font-family: 'Kalam';
+  color: #3b1519;
+  background-color: #fcdfdb;
+}
+
+.menu-card .menu-card__header {
+  font-family: 'Devonshire';
+}
+
+.menu-card .menu-table__items--list {
+  font-weight: 700;
+}
+/*# sourceMappingURL=main.css.map */
