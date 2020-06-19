@@ -1,0 +1,25 @@
+<?xml version="1.0" standalone="yes"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="348" height="48">
+<path style="fill:#edefef; stroke:none;" d="M0 0L0 48L348 48L348 0L0 0z"/>
+<path style="fill:#95c3f2; stroke:none;" d="M2.33333 13.6667C2.27778 13.7222 2.22222 14.7778 2.66667 14.3333C2.72223 14.2778 2.77777 13.2222 2.33333 13.6667z"/>
+<path style="fill:#4092f3; stroke:none;" d="M3 14L3 16C4.63516 15.4549 4.45495 15.6352 5 14L3 14z"/>
+<path style="fill:#0670f3; stroke:none;" d="M4 15C7.965 25.143 17.6572 25.277 27 26.1698C46.8147 28.0631 67.0822 27 87 27L344 27C341.127 17.4407 331.199 20 323 20L262 20L104 20L50 20C40.4972 20 30.4297 20.9391 21 19.7106C15.0641 18.9374 9.76419 16.366 4 15z"/>
+<path style="fill:#5ca3f3; stroke:none;" d="M6 15L7 16L6 15z"/>
+<path style="fill:#95c3f2; stroke:none;" d="M9 16L10 17L9 16M4 17L5 18L4 17z"/>
+<path style="fill:#629df0; stroke:none;" d="M11 17L12 18L11 17z"/>
+<path style="fill:#5ca3f3; stroke:none;" d="M5 18L6 19L5 18z"/>
+<path style="fill:#7ab2f2; stroke:none;" d="M14.6667 18.3333C14.2222 18.7778 15.2778 18.7222 15.3333 18.6667C15.7778 18.2222 14.7222 18.2778 14.6667 18.3333z"/>
+<path style="fill:#4995f2; stroke:none;" d="M19.6667 19.3333C19.2222 19.7778 20.2778 19.7222 20.3333 19.6667C20.7778 19.2222 19.7222 19.2778 19.6667 19.3333z"/>
+<path style="fill:#7ab2f2; stroke:none;" d="M21 19C22.2484 19.6848 22.5484 19.7488 24 20C22.7516 19.3152 22.4516 19.2512 21 19z"/>
+<path style="fill:#b5d1f1; stroke:none;" d="M24 19C31.879 22.3062 44.4661 20 53 20L117 20L341 20C333.121 16.6938 320.534 19 312 19L248 19L24 19z"/>
+<path style="fill:#95c3f2; stroke:none;" d="M341 20L342 21L341 20z"/>
+<path style="fill:#7ab2f2; stroke:none;" d="M9 22L10 23L9 22z"/>
+<path style="fill:#5ca3f3; stroke:none;" d="M11 23L12 24L11 23z"/>
+<path style="fill:#68a9f3; stroke:none;" d="M13 24L14 25L13 24z"/>
+<path style="fill:#95c3f2; stroke:none;" d="M343 24L344 25L343 24z"/>
+<path style="fill:#4c9cf4; stroke:none;" d="M16.6667 25.3333C16.2222 25.7778 17.2778 25.7222 17.3333 25.6667C17.7778 25.2222 16.7222 25.2778 16.6667 25.3333z"/>
+<path style="fill:#b5d1f1; stroke:none;" d="M20.6667 26.3333C20.2222 26.7778 21.2778 26.7222 21.3333 26.6667C21.7778 26.2222 20.7222 26.2778 20.6667 26.3333z"/>
+<path style="fill:#7ab2f2; stroke:none;" d="M22 26C23.2484 26.6848 23.5484 26.7488 25 27C23.7516 26.3152 23.4516 26.2512 22 26z"/>
+<path style="fill:#4092f3; stroke:none;" d="M25 26C26.769 26.7789 28.0359 26.9124 30 27C28.231 26.2211 26.9641 26.0876 25 26z"/>
+<path style="fill:#4c9cf4; stroke:none;" d="M344 26L345 27L344 26z"/>
+</svg>

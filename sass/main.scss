@@ -1,4 +1,37 @@
 @import '../libs/reset.scss';
+@font-face{
+    font-family: "OpenSans-Regular";
+    src: url(/font-face/Sans-Regular.ttf);
+}
+
+@font-face{
+    font-family: "Devonshire-Regular";
+    src: url(/font-face/Devonshire-Regular.ttf);
+}
+@font-face{
+    font-family:"CroissantOne-Regular";
+    src: url(/font-face/CroissantOne-Regular.ttf);
+}
+@font-face{
+    font-family:"LibreBaskerville-Regular";
+    src: url(/font-face/LibreBaskerville-Regular.ttf);
+}
+@font-face{
+    font-family:"Parisienne-Regular";
+    src: url(/font-face/Parisienne-Regular.ttf);
+}
+@font-face{
+    font-family:"KaushanScript-Regular";
+    src: url(/font-face/KaushanScript-Regular.ttf);
+}
+@font-face{
+    font-family:"Kalam-Regular";
+    src: url(/font-face/Kalam-Regular.ttf);
+}
+@font-face{
+    font-family:"Tillana-Regular";
+    src: url(/font-face/Tillana-Regular.ttf);
+}
 
 /***  VARIABLE  ***/
 
@@ -19,7 +52,7 @@ $color-menu-2-3-text:#6a56a5;
 $color-menu-2-gradient-start:$color-menu-2-text;
 $color-menu-2-gradient-end:$color-menu-2-3-text;
 /* color menu 3 */
-$color-menu-3-bg:#faf9f8;
+$color-menu-3-bg:#edefef;
 $color-menu-3-text:#215de9;
 $color-menu-3-3-text:#0887fb;
 $color-menu-3-gradient-start:$color-menu-3-text;
@@ -30,12 +63,16 @@ $color-menu-4-text:#76c158;
 $color-menu-4-gradient-start:$color-menu-4-text;
 $color-menu-4-gradient-end:#c2db76;
 
+// Animation 
+$duration-transition: 0.8s;
+$duration-animation: 1.4s;
+
 
 /* BASE */
 body{
-    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    font-family: 'OpenSans-Regular',Arial, Helvetica, sans-serif;
     font-size: 16px;
-    line-height: 1.5;
+    line-height: 2;
     background-color: $color-primary;
 }
 a{
@@ -48,7 +85,7 @@ li{
 /* TYPO */
 h2{
     font-size: 18px;
-    line-height: 2;
+    line-height: 3;
 }
 h3{
     padding-top: 18px;
@@ -56,7 +93,7 @@ h3{
     line-height: 1.5;
 }
 p{
-    padding-top: 16px;
+    font-size:25px ;
 }
 
 /* header */
@@ -80,7 +117,7 @@ p{
 
 /* article */
 article {
-    width: 90%;
+    width: 80%;
     margin: 3em auto 4em;
     text-align: justify;
     &__section{
@@ -132,7 +169,7 @@ article {
     justify-content: space-between;
     align-content: space-between;
     margin: 0 auto;
-    padding: 5em;
+    padding: 2em;
     width: 100%;
     height: auto;
 
@@ -140,13 +177,14 @@ article {
         display: flex;
         flex-wrap: wrap;
         position: relative;
-        width: 45%;
+        width: 40%;
         height: 80vmin;
         margin: 2em auto;
         text-align: center;
         overflow: hidden;
         border-radius: 0.3em;
         box-shadow: 0 0 10px 0 rgba(152, 153, 151, 0.6);
+        transition: box-shadow calc(#{$duration-transition}*1.5) ease-in-out;
 
         &:hover{
             box-shadow: 0 0 10px 0 rgba(152, 153, 151, 1);
@@ -156,7 +194,12 @@ article {
             top:50%;
             left:50%;
             opacity: 1;
-            transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%) scale(1);
+            transition: all $duration-transition ease-in-out;
+            &:hover{
+                opacity: 0.6;
+                 transform: translate(-50%,-50%) scale(1.19);
+            }
         }
         &--subtitle{
             font-size: 24px;
@@ -170,22 +213,19 @@ article {
 
             }
             .nav-card__item--title{
-                font-family: 'Devonshire';
+                font-family: 'Devonshire-Regular';
             }
             .nav-card__item--subtitle {
-                font-family: 'Tillana';
+                font-family: 'Tillana-Regular';
                 text-transform: uppercase;
-            }
-            .nav-card__item--img{
-                width: 45px;
-                background-color: #f04c5f;
+                font-weight: 700;
             }
        }
       &--menu-2 {
             background-color: $color-menu-2-bg;
             .nav-card__item--title {
-                font-family: 'Croissant One';
-                font-size: 18px;
+                font-family: 'CroissantOne-Regular';
+                font-size: 12px;
                 color: $color-menu-2-text;
                 background: linear-gradient(
                     to right,
@@ -196,14 +236,14 @@ article {
                -webkit-background-clip: text;
             }
             .nav-card__item--subtitle{
-                font-family: 'Libre Baskerville';
+                font-family: 'LibreBaskerville-Regular';
                 color: $color-menu-2-text;
             }
       }
       &--menu-3 {
            background-color: $color-menu-3-bg;
            .nav-card__item--title{
-               font-family: 'Parisienne';
+               font-family: 'Parisienne-Regular';
                color:$color-menu-3-text;
                background-color: linear-gradient(
                    to right,
@@ -213,14 +253,14 @@ article {
                
         }
         .nav-card__item--subtitle {
-            font-family: 'Tillana';
+            font-family: 'Tillana-Regular';
             color: $color-menu-3-3-text;
         }
       }
       &--menu-4{
           background: $color-menu-3-bg;
           .nav-card__item--title{
-              font-family: 'Kaushan Script';
+              font-family: 'KaushanScript-Regular';
               color: $color-menu-4-text;
               background: linear-gradient(
                   to right,
@@ -231,7 +271,7 @@ article {
               -webkit-text-fill-color: transparent;
           }
           .nav-card__item--subtitle {
-              font-family: 'Tillana';
+              font-family: 'Tillana-Regular';
               color: $color-menu-4-text;
           }
       } 
@@ -251,19 +291,141 @@ article {
     display: flex;
     flex-direction: column;
     margin: 2em auto 8em;
-    padding: 2em;
-    width: 90%;
+    padding: 4em;
+    width: 70%;
     box-shadow: 0 0 10px 0 rgba(152,153,151,0.6);
 
     &-menu-1{
-        font-family: 'Kalam';
+        font-family: 'Kalam-Regular';
         color: $color-menu-1-text;
         background-color: $color-menu-1-bg;
+        .menu-card__header{
+               font-family: 'Devonshire-Regular';
+               display: flex;
+               flex-direction: column;
+               align-items: center;
+              }
+        .menu-table__items--list{
+               font-weight: 700;
+              }  
+        .menu-card__footer{
+            font-family: 'Devonshire-Regular';
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+                }           
+        }
+
+    &-menu-2 {
+         font-family: 'Baskerville';
+         color: $color-menu-2-text;
+         background-color: $color-menu-2-bg;
+         .menu-card__header{
+             padding-bottom: 3em;
+             font-family: 'CroissantOne-Regular';
+             color: $color-menu-2-text;
+             background: linear-gradient(
+                 to right,
+                 $color-menu-2-gradient-start 0%,
+                 $color-menu-2-gradient-end 100%
+             );
+             -webkit-background-clip: text;
+             -webkit-text-fill-color: transparent;
+         }
+         .menu-table__items{
+             margin-left: 0;
+             margin-right: 0;
+
+         }
     }
-    .menu-card__header{
-        font-family: 'Devonshire';
+    &-menu-3{
+        font-family: 'Tillana-Regular';
+        background-color: $color-menu-3-bg;
+        .menu-card__header{
+            font-family: 'Parisienne-Regular';
+            color: $color-menu-3-text;
+            background: linear-gradient(to right,$color-menu-3-gradient-start 0%,$color-menu-3-gradient-end 100%);
+            -webkit-background-clip:text;
+            -webkit-text-fill-color:transparent;
+            &--title{
+                padding-bottom: 0.5em;
+                font-size: 21px;
+            }
+        }
+        .menu-table__items{
+            margin-left: 0;
+            margin-right: 0;
+        }
     }
-    .menu-table__items--list{
+    &-menu-4{
+        font-family: 'Tillana-Regular';
+        background-color: $color-menu-4-bg;
+        .menu-card__header{
+            font-family: 'KaushanScript-Regular';
+            &--title{
+                padding-bottom: 0.5em;
+                font-size: 21px;
+            }
+            color: $color-menu-4-text;
+            background: linear-gradient(
+                to right,
+                $color-menu-4-gradient-start 0%,
+                $color-menu-4-gradient-end 100%
+            );
+            -webkit-background-clip: text;
+            -webkit-text-fill-color:transparent;
+        }
+        .menu-table__items{
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+    &__header{
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        &--title{
+            align-self: center;
+            font-size: 18px;
             font-weight: 700;
-        }        
+        }
+    }
+    &--title{
+        align-self: center;
+        font-size: 18px;
+    }
+   
 }
+.menu-table{
+    font-size: 16px;
+    &__2{
+        color: $color-menu-2-2-text;
+    }
+    &__3{
+        color: $color-menu-2-3-text;
+    }
+    &__caption{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &--title{
+            position: relative;
+            white-space: nowrap;
+            font-weight: 700;
+
+        }
+
+    }
+    &__items{
+        margin: 1em 0 2em;
+        &--list{
+            display: flex;
+            justify-content: space-between;
+            line-height: 2;
+        }
+       
+
+    }
+    
+}
+
