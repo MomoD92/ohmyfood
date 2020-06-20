@@ -63,10 +63,79 @@ $color-menu-4-text:#76c158;
 $color-menu-4-gradient-start:$color-menu-4-text;
 $color-menu-4-gradient-end:#c2db76;
 
+/* color other */
+$color-black: #070504;
+$color-white: #fff;
+$lighter:lighten( $color-link, 0.7);
+
 // Animation 
 $duration-transition: 0.8s;
 $duration-animation: 1.4s;
 
+/* ANIMATION */
+
+     // animation for dots
+
+@keyframes blink {
+    0%, 60%, 100% {
+              opacity: 0.4;
+              transform: initial;
+    }
+    30% {
+        opacity: 1;
+        transform: translateY(-15px) scale(1.8);
+    }
+}
+    
+     // animation for footer links
+
+@keyframes wiggle {
+    0% {
+        transform: translate(2px, 0);
+    }
+    45% {
+        transform: translate(-2px, 0) rotate(-2deg);
+    }
+    55% {
+        transform: rotate(2deg);
+    }
+    100%{
+        transform: translate(2px, 0);
+    }
+}
+
+/* MEDIA QUERY */
+
+$breakpoints: (
+    'small': ( min-width: 768px ),
+    'medium':(min-width: 992px ),
+    'large': (min-width: 1200px ),
+    'x-large': (min-width: 1400px ),
+);
+
+/* MIXINS*/
+//https://www.sitepoint.com/sass-mixins-kickstart-project/
+
+@mixin breakpoint($name) {
+    @if map-has-key($breakpoints, $name) {
+      @media #{inspect(map-get($breakpoints, $name))} {
+    @content;
+  }
+}
+@else {
+  @warn "Couldn't find a breakpoint named `#{$name}`.";
+ }
+}
+
+/* FUNCTION */
+//  https://css-tricks.com/sass-techniques-from-the-trenches/
+@function scut-strip-unit($num) {
+    @return $num / ($num * 0 + 1);
+  }
+  
+  @function scut-rem($pixels) {
+    @return scut-strip-unit($pixels) / $scut-rem-base * 1rem;
+  }
 
 /* BASE */
 body{
@@ -107,6 +176,13 @@ p{
     }
     &__heading--link {
          color: $color-link;
+         transition: text-shadow $duration-transition ease-in-out;
+         &:hover {
+            text-shadow: 0 0 5px $color-black, 0 0 10px $color-white,
+            0 0 20px $lighter, 0 0 30px $lighter, 0 0 40px $lighter, 
+            0 0 55px $lighter, 0 0 75px $lighter;
+            
+         }
     }
 }
 
@@ -138,10 +214,18 @@ article {
         width: 100%;
         display: flex;
         justify-content: space-between;
-    }
-    &__infos--link a{
+
+        &--link{
+         color: $color-link;
+         //animation: wiggle 75ms infinite;
+         animation: wiggle $duration-animation infinite;
+         animation-timing-function: linear;
+         }
+
+      a{
         color: $color-link;
     }
+  } 
 }
 
 /* compenent btn */
@@ -159,6 +243,27 @@ article {
         @extend .header; //Extend color and background
         border-radius: 0.4em;
     }
+    // animation for dots
+    span {
+          position: absolute;
+          right: 1.5em;
+          bottom: 0.25em;
+          font-size: 33px;
+          
+          animation-name: blink;
+          animation-duration: $duration-animation;
+          animation-iteration-count: infinite;
+                     animation-fill-mode: both;
+          &:nth-child(2) {
+                          right: 1.2em;
+                animation-delay: 0.2s;
+          }
+          &:nth-child(3) {
+                    right: .9em;
+                animation-delay: 0.4s;
+                
+          }
+    }
 }
 
 /* Page home */
@@ -172,6 +277,9 @@ article {
     padding: 2em;
     width: 100%;
     height: auto;
+    @include breakpoint(large) {
+        width: 60%;
+    }
 
     &__item{
         display: flex;
@@ -185,6 +293,13 @@ article {
         border-radius: 0.3em;
         box-shadow: 0 0 10px 0 rgba(152, 153, 151, 0.6);
         transition: box-shadow calc(#{$duration-transition}*1.5) ease-in-out;
+        @include breakpoint(small) {
+            width: 80%;
+        }
+        @include breakpoint(medium) {
+            width: 40%;
+            height: 70vmin;
+        }
 
         &:hover{
             box-shadow: 0 0 10px 0 rgba(152, 153, 151, 1);
@@ -202,8 +317,14 @@ article {
             }
         }
         &--subtitle{
-            font-size: 24px;
+            font-size: scut-rem(24px);
             line-height: 1.4;
+            @include breakpoint(small) {
+                font-size: scut-rem(28px);
+            }
+            @include breakpoint(medium) {
+                line-height: 2;
+            }
         }
         &--menu-1{
             background-color: $color-menu-1-bg;
@@ -225,7 +346,7 @@ article {
             background-color: $color-menu-2-bg;
             .nav-card__item--title {
                 font-family: 'CroissantOne-Regular';
-                font-size: 12px;
+                font-size: scut-rem(18px);
                 color: $color-menu-2-text;
                 background: linear-gradient(
                     to right,
@@ -294,6 +415,18 @@ article {
     padding: 4em;
     width: 70%;
     box-shadow: 0 0 10px 0 rgba(152,153,151,0.6);
+    @include breakpoint(small) {
+        padding: 3em;
+        width: 80%;
+    }
+    @include breakpoint(medium) {
+        padding: 4em;
+        width: 70%;
+    }
+    @include breakpoint(large) {
+        padding: 5em;
+        width: 60%;
+    }
 
     &-menu-1{
         font-family: 'Kalam-Regular';
@@ -349,12 +482,27 @@ article {
             -webkit-text-fill-color:transparent;
             &--title{
                 padding-bottom: 0.5em;
-                font-size: 21px;
+                font-size: scut-rem(38px);
+                @include breakpoint(small) {
+                    padding-bottom: 0.8em;
+                    font-size: scut-rem(44px);
+                }
+                @include breakpoint(medium) {
+                    padding-bottom: 1em;
+                    font-size: scut-rem(48px);
+                }
+                @include breakpoint(large) {
+                    font-size: scut-rem(58px);
+                }
             }
         }
         .menu-table__items{
             margin-left: 0;
             margin-right: 0;
+            @include breakpoint(x-large) {
+                margin-left: 3em;
+                margin-right: 3em;
+            }
         }
     }
     &-menu-4{
@@ -364,7 +512,18 @@ article {
             font-family: 'KaushanScript-Regular';
             &--title{
                 padding-bottom: 0.5em;
-                font-size: 21px;
+                font-size: scut-rem(38px);
+                @include breakpoint(small) {
+                    padding-bottom: 0.8em;
+                    font-size: scut-rem(44px);
+                }
+                @include breakpoint(medium) {
+                    padding-bottom: 1em;
+                    font-size: scut-rem(48px);
+                }
+                @include breakpoint(large) {
+                    font-size: scut-rem(58px);
+                }
             }
             color: $color-menu-4-text;
             background: linear-gradient(
@@ -378,6 +537,10 @@ article {
         .menu-table__items{
             margin-left: 0;
             margin-right: 0;
+            @include breakpoint(x-large) {
+                margin-left: 2em;
+                margin-right: 2em;
+            }
         }
     }
     &__header{
@@ -392,12 +555,19 @@ article {
     }
     &--title{
         align-self: center;
-        font-size: 18px;
+        font-size: scut-rem(18px);
+        @include breakpoint(small) {
+            font-size: scut-rem(28px);
+        }
+        @include breakpoint(large) {
+            font-size: scut-rem(38px);
+        }
+
     }
    
 }
 .menu-table{
-    font-size: 16px;
+    font-size: scut-rem(16px);
     &__2{
         color: $color-menu-2-2-text;
     }
@@ -412,6 +582,18 @@ article {
             position: relative;
             white-space: nowrap;
             font-weight: 700;
+            @include breakpoint(small) {
+                font-size: scut-rem(16px);
+              }
+              @include breakpoint(medium) {
+                font-size: scut-rem(18px);
+              }
+              @include breakpoint(large) {
+                font-size: scut-rem(20px);
+              }
+              @include breakpoint(x-large) {
+                font-size: scut-rem(24px);
+              }
 
         }
 
@@ -422,6 +604,11 @@ article {
             display: flex;
             justify-content: space-between;
             line-height: 2;
+            font-size: scut-rem(16px);
+            @include breakpoint(large) {
+              flex-direction: row;
+              justify-content: space-between;  
+            }
         }
        
 
