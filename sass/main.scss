@@ -68,9 +68,12 @@ $color-black: #070504;
 $color-white: #fff;
 $lighter:lighten( $color-link, 0.7);
 
+// FONT SIZE BASE PX
+$scut-rem-base: 16 !default;
+
 // Animation 
 $duration-transition: 0.8s;
-$duration-animation: 1.4s;
+$duration-animation: 80ms;
 
 /* ANIMATION */
 
@@ -144,25 +147,29 @@ body{
     line-height: 2;
     background-color: $color-primary;
 }
+img{
+    width: 33%;
+    height: 40px;
+}
 a{
     text-decoration: none;
 }
 li{
-    padding-top: 18px;
+    padding-top: scut-rem(18px);
 }
 
 /* TYPO */
 h2{
-    font-size: 18px;
+    font-size: scut-rem(28px);
     line-height: 3;
 }
 h3{
-    padding-top: 18px;
-    font-size: 28px;
+    padding-top: scut-rem(18px);
+    font-size: scut-rem(28px);
     line-height: 1.5;
 }
 p{
-    font-size:25px ;
+    font-size:scut-rem(16px) ;
 }
 
 /* header */
@@ -171,8 +178,17 @@ p{
     &__heading {
         padding: 0.2em;
         text-align: center;
-        font-size: 34px;
+        font-size: scut-rem(34px);
         font-weight: 800;
+        @include breakpoint(small) {
+            font-size: scut-rem(38px);
+        }
+        @include breakpoint(medium) {
+            font-size: scut-rem(42px);
+        }
+        @include breakpoint(large){
+            font-size: scut-rem(48px);
+        }
     }
     &__heading--link {
          color: $color-link;
@@ -196,6 +212,15 @@ article {
     width: 80%;
     margin: 3em auto 4em;
     text-align: justify;
+    @include breakpoint(small) {
+        width: 80%;
+    }
+    @include breakpoint(medium) {
+        width: 70%;
+    }
+    @include breakpoint(large) {
+        width: 60%;
+    }
     &__section{
         padding-bottom: 2em;
     }
@@ -208,6 +233,10 @@ article {
     left: 0;
     bottom: 0;
     @extend .header;
+    @include breakpoint(small) {
+        justify-content: space-between;
+        padding: 0;
+    }
     &__infos{
         padding: 0 2em 0.2em;
         font-size: 16px;
@@ -220,6 +249,23 @@ article {
          //animation: wiggle 75ms infinite;
          animation: wiggle $duration-animation infinite;
          animation-timing-function: linear;
+
+         @include breakpoint(small) {
+             padding: 0.8em 2em;
+             font-size: scut-rem(18px);
+             transform: translate(2px, 0);
+         }
+         @include breakpoint(medium) {
+             font-size: scut-rem(20px);
+             animation: none;
+             &:hover {
+                 animation: wiggle $duration-animation infinite;
+                 animation-timing-function: linear;
+             }
+          }
+          @include breakpoint(large) {
+              font-size: scut-rem(22px);
+          }
          }
 
       a{
@@ -251,7 +297,7 @@ article {
           font-size: 33px;
           
           animation-name: blink;
-          animation-duration: $duration-animation;
+          animation-duration: 1.4s;
           animation-iteration-count: infinite;
                      animation-fill-mode: both;
           &:nth-child(2) {
@@ -297,7 +343,7 @@ article {
             width: 80%;
         }
         @include breakpoint(medium) {
-            width: 40%;
+            width: 45%;
             height: 70vmin;
         }
 
@@ -366,11 +412,13 @@ article {
            .nav-card__item--title{
                font-family: 'Parisienne-Regular';
                color:$color-menu-3-text;
-               background-color: linear-gradient(
+               background: linear-gradient(
                    to right,
                    $color-menu-3-gradient-start 0%,
                    $color-menu-3-gradient-end 100%
                );
+               -webkit-background-clip: text;
+               -webkit-text-fill-color: transparent;
                
         }
         .nav-card__item--subtitle {
@@ -413,7 +461,7 @@ article {
     flex-direction: column;
     margin: 2em auto 8em;
     padding: 4em;
-    width: 70%;
+    width: 90%;
     box-shadow: 0 0 10px 0 rgba(152,153,151,0.6);
     @include breakpoint(small) {
         padding: 3em;
@@ -439,8 +487,9 @@ article {
                align-items: center;
               }
         .menu-table__items--list{
-               font-weight: 700;
-              }  
+                font-weight: 700; 
+        }
+              
         .menu-card__footer{
             font-family: 'Devonshire-Regular';
             display: flex;
@@ -563,9 +612,7 @@ article {
             font-size: scut-rem(38px);
         }
 
-    }
-   
-}
+     }
 .menu-table{
     font-size: scut-rem(16px);
     &__2{
@@ -594,10 +641,10 @@ article {
               @include breakpoint(x-large) {
                 font-size: scut-rem(24px);
               }
-
+            
         }
 
-    }
+     }
     &__items{
         margin: 1em 0 2em;
         &--list{
@@ -614,5 +661,5 @@ article {
 
     }
     
+ }
 }
-
