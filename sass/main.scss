@@ -1,36 +1,36 @@
 @import '../libs/reset.scss';
 @font-face{
-    font-family: "OpenSans-Regular";
-    src: url(/font-face/Sans-Regular.ttf);
+    font-family: "OpenSans";
+    src: url(/font-face/OpenSans.ttf);
 }
 
 @font-face{
-    font-family: "Devonshire-Regular";
-    src: url(/font-face/Devonshire-Regular.ttf);
+    font-family: "Devonshire";
+    src: url(/font-face/Devonshire.ttf);
 }
 @font-face{
-    font-family:"CroissantOne-Regular";
-    src: url(/font-face/CroissantOne-Regular.ttf);
+    font-family:"CroissantOne";
+    src: url(/font-face/CroissantOne.ttf);
 }
 @font-face{
-    font-family:"LibreBaskerville-Regular";
-    src: url(/font-face/LibreBaskerville-Regular.ttf);
+    font-family:"LibreBaskerville";
+    src: url(/font-face/LibreBaskerville.ttf);
 }
 @font-face{
-    font-family:"Parisienne-Regular";
-    src: url(/font-face/Parisienne-Regular.ttf);
+    font-family:"Parisienne";
+    src: url(/font-face/Parisienne.ttf);
 }
 @font-face{
-    font-family:"KaushanScript-Regular";
-    src: url(/font-face/KaushanScript-Regular.ttf);
+    font-family:"KaushanScript";
+    src: url(/font-face/KaushanScript.ttf);
 }
 @font-face{
-    font-family:"Kalam-Regular";
-    src: url(/font-face/Kalam-Regular.ttf);
+    font-family:"Kalam";
+    src: url(/font-face/Kalam.ttf);
 }
 @font-face{
-    font-family:"Tillana-Regular";
-    src: url(/font-face/Tillana-Regular.ttf);
+    font-family:"Tillana";
+    src: url(/font-face/Tillana.ttf);
 }
 
 /***  VARIABLE  ***/
@@ -142,7 +142,7 @@ $breakpoints: (
 
 /* BASE */
 body{
-    font-family: 'OpenSans-Regular',Arial, Helvetica, sans-serif;
+    font-family: 'OpenSans',Arial, Helvetica, sans-serif;
     font-size: 16px;
     line-height: 2;
     background-color: $color-primary;
@@ -214,6 +214,7 @@ article {
     text-align: justify;
     @include breakpoint(small) {
         width: 80%;
+
     }
     @include breakpoint(medium) {
         width: 70%;
@@ -243,28 +244,33 @@ article {
         width: 100%;
         display: flex;
         justify-content: space-between;
+        @include breakpoint(small) {
+            padding: 0em;
+           
+        }
 
         &--link{
          color: $color-link;
-         //animation: wiggle 75ms infinite;
-         animation: wiggle $duration-animation infinite;
-         animation-timing-function: linear;
-
-         @include breakpoint(small) {
-             padding: 0.8em 2em;
+         &:hover {
+            animation: wiggle $duration-animation infinite;
+            animation-timing-function: linear;
+        }   
+        @include breakpoint(small) {
+             //padding: 0.8em 2em;
              font-size: scut-rem(18px);
-             transform: translate(2px, 0);
+            //transform: translate(2px, 0);  
          }
          @include breakpoint(medium) {
              font-size: scut-rem(20px);
-             animation: none;
-             &:hover {
-                 animation: wiggle $duration-animation infinite;
-                 animation-timing-function: linear;
-             }
+            
           }
           @include breakpoint(large) {
               font-size: scut-rem(22px);
+              &:hover {
+                animation: wiggle $duration-animation infinite;
+                animation-timing-function: linear;
+            }   
+             
           }
          }
 
@@ -320,8 +326,8 @@ article {
     justify-content: space-between;
     align-content: space-between;
     margin: 0 auto;
-    //padding: 2em;
-    width: 100%;
+    padding: 2em;
+    width: 90%;
     height: auto;
     @include breakpoint(large) {
         width: 80%;
@@ -340,7 +346,7 @@ article {
         transition: box-shadow calc(#{$duration-transition}*1.5) ease-in-out;
         
        @include breakpoint(small) {
-            width: 60%;
+            width: 80%;
           }
          
       &:hover{
@@ -360,7 +366,7 @@ article {
         }
         &--subtitle{
             font-size: scut-rem(24px);
-            line-height: 1.4;
+            line-height: 1.2;
             @include breakpoint(small) {
                 font-size: scut-rem(28px);
             }
@@ -376,10 +382,10 @@ article {
 
             }
             .nav-card__item--title{
-                font-family: 'Devonshire-Regular';
+                font-family: 'Devonshire';
             }
             .nav-card__item--subtitle {
-                font-family: 'Tillana-Regular';
+                font-family: 'Tillana';
                 text-transform: uppercase;
                 font-weight: 700;
             }
@@ -387,7 +393,7 @@ article {
       &--menu-2 {
             background-color: $color-menu-2-bg;
             .nav-card__item--title {
-                font-family: 'CroissantOne-Regular';
+                font-family: 'CroissantOne';
                 font-size: scut-rem(18px);
                 color: $color-menu-2-text;
                 background: linear-gradient(
@@ -399,14 +405,14 @@ article {
                -webkit-background-clip: text;
             }
             .nav-card__item--subtitle{
-                font-family: 'LibreBaskerville-Regular';
+                font-family: 'LibreBaskerville';
                 color: $color-menu-2-text;
             }
       }
       &--menu-3 {
            background-color: $color-menu-3-bg;
            .nav-card__item--title{
-               font-family: 'Parisienne-Regular';
+               font-family: 'Parisienne';
                color:$color-menu-3-text;
                background: linear-gradient(
                    to right,
@@ -418,14 +424,14 @@ article {
                
         }
         .nav-card__item--subtitle {
-            font-family: 'Tillana-Regular';
+            font-family: 'Tillana';
             color: $color-menu-3-3-text;
         }
       }
       &--menu-4{
           background: $color-menu-3-bg;
           .nav-card__item--title{
-              font-family: 'KaushanScript-Regular';
+              font-family: 'KaushanScript';
               color: $color-menu-4-text;
               background: linear-gradient(
                   to right,
@@ -436,7 +442,7 @@ article {
               -webkit-text-fill-color: transparent;
           }
           .nav-card__item--subtitle {
-              font-family: 'Tillana-Regular';
+              font-family: 'Tillana';
               color: $color-menu-4-text;
           }
       } 
@@ -457,19 +463,19 @@ article {
     flex-direction: column;
     margin: 2em auto 8em;
     padding: 4em;
-    width: 90%;
+    width: 60%;
     box-shadow: 0 0 10px 0 rgba(152,153,151,0.6);
     @include breakpoint(small) {
-        padding: 2em;
+        //padding: 2em;
         width: 100%;
     }
     
     &-menu-1{
-        font-family: 'Kalam-Regular';
+        font-family: 'Kalam';
         color: $color-menu-1-text;
         background-color: $color-menu-1-bg;
         .menu-card__header{
-               font-family: 'Devonshire-Regular';
+               font-family: 'Devonshire';
                display: flex;
                flex-direction: column;
                align-items: center;
@@ -479,7 +485,7 @@ article {
         }
               
         .menu-card__footer{
-            font-family: 'Devonshire-Regular';
+            font-family: 'Devonshire';
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -490,9 +496,28 @@ article {
          font-family: 'Baskerville';
          color: $color-menu-2-text;
          background-color: $color-menu-2-bg;
+         width: 60%;
+         padding: 0em;
+         img{
+             width: 28%;
+         }
+         @include breakpoint(small) {
+            img{
+                width: 14%;
+            }
+            width: 100%;
+            padding: 0em;
+        }
+        @include breakpoint(medium) {
+            width: 100%;
+            img{
+                width: 14%;
+            }
+        }
+       
          .menu-card__header{
              padding-bottom: 2em;
-             font-family: 'CroissantOne-Regular';
+             font-family: 'CroissantOne';
              color: $color-menu-2-text;
              background: linear-gradient(
                  to right,
@@ -510,10 +535,23 @@ article {
     
     }
     &-menu-3{
-        font-family: 'Tillana-Regular';
+        font-family: 'Tillana';
         background-color: $color-menu-3-bg;
+        @include breakpoint(small) {
+            img{
+                width: 14%;
+            }
+            width: 100%;
+            padding: 0em;
+        }
+        @include breakpoint(medium) {
+            width: 100%;
+            img{
+                width: 14%;
+            }
+        }
         .menu-card__header{
-            font-family: 'Parisienne-Regular';
+            font-family: 'Parisienne';
             color: $color-menu-3-text;
             background: linear-gradient(to right,$color-menu-3-gradient-start 0%,$color-menu-3-gradient-end 100%);
             -webkit-background-clip:text;
@@ -544,10 +582,23 @@ article {
         }
     }
     &-menu-4{
-        font-family: 'Tillana-Regular';
+        font-family: 'Tillana';
         background-color: $color-menu-4-bg;
+        @include breakpoint(small) {
+            img{
+                width: 14%;
+            }
+            width: 100%;
+            padding: 0em;
+        }
+        @include breakpoint(medium) {
+            width: 100%;
+            img{
+                width: 14%;
+            }
+        }
         .menu-card__header{
-            font-family: 'KaushanScript-Regular';
+            font-family: 'KaushanScript';
             &--title{
                 padding-bottom: 0.5em;
                 font-size: scut-rem(38px);

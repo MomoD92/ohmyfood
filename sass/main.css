@@ -50,43 +50,43 @@ td:not([align]), th:not([align]) {
 }
 
 @font-face {
-  font-family: "OpenSans-Regular";
-  src: url(/font-face/Sans-Regular.ttf);
+  font-family: "OpenSans";
+  src: url(/font-face/OpenSans.ttf);
 }
 
 @font-face {
-  font-family: "Devonshire-Regular";
-  src: url(/font-face/Devonshire-Regular.ttf);
+  font-family: "Devonshire";
+  src: url(/font-face/Devonshire.ttf);
 }
 
 @font-face {
-  font-family: "CroissantOne-Regular";
-  src: url(/font-face/CroissantOne-Regular.ttf);
+  font-family: "CroissantOne";
+  src: url(/font-face/CroissantOne.ttf);
 }
 
 @font-face {
-  font-family: "LibreBaskerville-Regular";
-  src: url(/font-face/LibreBaskerville-Regular.ttf);
+  font-family: "LibreBaskerville";
+  src: url(/font-face/LibreBaskerville.ttf);
 }
 
 @font-face {
-  font-family: "Parisienne-Regular";
-  src: url(/font-face/Parisienne-Regular.ttf);
+  font-family: "Parisienne";
+  src: url(/font-face/Parisienne.ttf);
 }
 
 @font-face {
-  font-family: "KaushanScript-Regular";
-  src: url(/font-face/KaushanScript-Regular.ttf);
+  font-family: "KaushanScript";
+  src: url(/font-face/KaushanScript.ttf);
 }
 
 @font-face {
-  font-family: "Kalam-Regular";
-  src: url(/font-face/Kalam-Regular.ttf);
+  font-family: "Kalam";
+  src: url(/font-face/Kalam.ttf);
 }
 
 @font-face {
-  font-family: "Tillana-Regular";
-  src: url(/font-face/Tillana-Regular.ttf);
+  font-family: "Tillana";
+  src: url(/font-face/Tillana.ttf);
 }
 
 /***  VARIABLE  ***/
@@ -165,7 +165,7 @@ td:not([align]), th:not([align]) {
 /* FUNCTION */
 /* BASE */
 body {
-  font-family: 'OpenSans-Regular',Arial, Helvetica, sans-serif;
+  font-family: 'OpenSans',Arial, Helvetica, sans-serif;
   font-size: 16px;
   line-height: 2;
   background-color: #fff;
@@ -303,8 +303,17 @@ article__section {
           justify-content: space-between;
 }
 
+@media (max-width: 768px) {
+  .footer__infos {
+    padding: 0em;
+  }
+}
+
 .footer__infos--link {
   color: #f3c74a;
+}
+
+.footer__infos--link:hover {
   -webkit-animation: wiggle 80ms infinite;
           animation: wiggle 80ms infinite;
   -webkit-animation-timing-function: linear;
@@ -313,30 +322,25 @@ article__section {
 
 @media (max-width: 768px) {
   .footer__infos--link {
-    padding: 0.8em 2em;
     font-size: 1.125rem;
-    -webkit-transform: translate(2px, 0);
-            transform: translate(2px, 0);
   }
 }
 
 @media (max-width: 992px) {
   .footer__infos--link {
     font-size: 1.25rem;
-    -webkit-animation: none;
-            animation: none;
-  }
-  .footer__infos--link:hover {
-    -webkit-animation: wiggle 80ms infinite;
-            animation: wiggle 80ms infinite;
-    -webkit-animation-timing-function: linear;
-            animation-timing-function: linear;
   }
 }
 
 @media (max-width: 1200px) {
   .footer__infos--link {
     font-size: 1.375rem;
+  }
+  .footer__infos--link:hover {
+    -webkit-animation: wiggle 80ms infinite;
+            animation: wiggle 80ms infinite;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
   }
 }
 
@@ -400,7 +404,8 @@ article__section {
   -ms-flex-line-pack: justify;
       align-content: space-between;
   margin: 0 auto;
-  width: 100%;
+  padding: 2em;
+  width: 90%;
   height: auto;
 }
 
@@ -433,7 +438,7 @@ article__section {
 
 @media (max-width: 768px) {
   .nav-card__item {
-    width: 60%;
+    width: 80%;
   }
 }
 
@@ -461,7 +466,7 @@ article__section {
 
 .nav-card__item--subtitle {
   font-size: 1.5rem;
-  line-height: 1.4;
+  line-height: 1.2;
 }
 
 @media (max-width: 768px) {
@@ -486,11 +491,11 @@ article__section {
 }
 
 .nav-card__item--menu-1 .nav-card__item--title {
-  font-family: 'Devonshire-Regular';
+  font-family: 'Devonshire';
 }
 
 .nav-card__item--menu-1 .nav-card__item--subtitle {
-  font-family: 'Tillana-Regular';
+  font-family: 'Tillana';
   text-transform: uppercase;
   font-weight: 700;
 }
@@ -500,7 +505,7 @@ article__section {
 }
 
 .nav-card__item--menu-2 .nav-card__item--title {
-  font-family: 'CroissantOne-Regular';
+  font-family: 'CroissantOne';
   font-size: 1.125rem;
   color: #c77529;
   background: -webkit-gradient(linear, left top, right top, from(#c77529), to(#6a56a5));
@@ -510,7 +515,7 @@ article__section {
 }
 
 .nav-card__item--menu-2 .nav-card__item--subtitle {
-  font-family: 'LibreBaskerville-Regular';
+  font-family: 'LibreBaskerville';
   color: #c77529;
 }
 
@@ -519,7 +524,7 @@ article__section {
 }
 
 .nav-card__item--menu-3 .nav-card__item--title {
-  font-family: 'Parisienne-Regular';
+  font-family: 'Parisienne';
   color: #215de9;
   background: -webkit-gradient(linear, left top, right top, from(#215de9), to(#0887fb));
   background: linear-gradient(to right, #215de9 0%, #0887fb 100%);
@@ -528,7 +533,7 @@ article__section {
 }
 
 .nav-card__item--menu-3 .nav-card__item--subtitle {
-  font-family: 'Tillana-Regular';
+  font-family: 'Tillana';
   color: #0887fb;
 }
 
@@ -537,7 +542,7 @@ article__section {
 }
 
 .nav-card__item--menu-4 .nav-card__item--title {
-  font-family: 'KaushanScript-Regular';
+  font-family: 'KaushanScript';
   color: #76c158;
   background: -webkit-gradient(linear, left top, right top, from(#76c158), to(#c2db76));
   background: linear-gradient(to right, #76c158 0%, #c2db76 100%);
@@ -546,7 +551,7 @@ article__section {
 }
 
 .nav-card__item--menu-4 .nav-card__item--subtitle {
-  font-family: 'Tillana-Regular';
+  font-family: 'Tillana';
   color: #76c158;
 }
 
@@ -570,26 +575,25 @@ article__section {
           flex-direction: column;
   margin: 2em auto 8em;
   padding: 4em;
-  width: 90%;
+  width: 60%;
   -webkit-box-shadow: 0 0 10px 0 rgba(152, 153, 151, 0.6);
           box-shadow: 0 0 10px 0 rgba(152, 153, 151, 0.6);
 }
 
 @media (max-width: 768px) {
   .menu-card {
-    padding: 2em;
     width: 100%;
   }
 }
 
 .menu-card-menu-1 {
-  font-family: 'Kalam-Regular';
+  font-family: 'Kalam';
   color: #3b1519;
   background-color: #fcdfdb;
 }
 
 .menu-card-menu-1 .menu-card__header {
-  font-family: 'Devonshire-Regular';
+  font-family: 'Devonshire';
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -607,7 +611,7 @@ article__section {
 }
 
 .menu-card-menu-1 .menu-card__footer {
-  font-family: 'Devonshire-Regular';
+  font-family: 'Devonshire';
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -624,11 +628,36 @@ article__section {
   font-family: 'Baskerville';
   color: #c77529;
   background-color: #fff5fe;
+  width: 60%;
+  padding: 0em;
+}
+
+.menu-card-menu-2 img {
+  width: 28%;
+}
+
+@media (max-width: 768px) {
+  .menu-card-menu-2 {
+    width: 100%;
+    padding: 0em;
+  }
+  .menu-card-menu-2 img {
+    width: 14%;
+  }
+}
+
+@media (max-width: 992px) {
+  .menu-card-menu-2 {
+    width: 100%;
+  }
+  .menu-card-menu-2 img {
+    width: 14%;
+  }
 }
 
 .menu-card-menu-2 .menu-card__header {
   padding-bottom: 2em;
-  font-family: 'CroissantOne-Regular';
+  font-family: 'CroissantOne';
   color: #c77529;
   background: -webkit-gradient(linear, left top, right top, from(#c77529), to(#6a56a5));
   background: linear-gradient(to right, #c77529 0%, #6a56a5 100%);
@@ -642,12 +671,31 @@ article__section {
 }
 
 .menu-card-menu-3 {
-  font-family: 'Tillana-Regular';
+  font-family: 'Tillana';
   background-color: #edefef;
 }
 
+@media (max-width: 768px) {
+  .menu-card-menu-3 {
+    width: 100%;
+    padding: 0em;
+  }
+  .menu-card-menu-3 img {
+    width: 14%;
+  }
+}
+
+@media (max-width: 992px) {
+  .menu-card-menu-3 {
+    width: 100%;
+  }
+  .menu-card-menu-3 img {
+    width: 14%;
+  }
+}
+
 .menu-card-menu-3 .menu-card__header {
-  font-family: 'Parisienne-Regular';
+  font-family: 'Parisienne';
   color: #215de9;
   background: -webkit-gradient(linear, left top, right top, from(#215de9), to(#0887fb));
   background: linear-gradient(to right, #215de9 0%, #0887fb 100%);
@@ -693,12 +741,31 @@ article__section {
 }
 
 .menu-card-menu-4 {
-  font-family: 'Tillana-Regular';
+  font-family: 'Tillana';
   background-color: #fdfffd;
 }
 
+@media (max-width: 768px) {
+  .menu-card-menu-4 {
+    width: 100%;
+    padding: 0em;
+  }
+  .menu-card-menu-4 img {
+    width: 14%;
+  }
+}
+
+@media (max-width: 992px) {
+  .menu-card-menu-4 {
+    width: 100%;
+  }
+  .menu-card-menu-4 img {
+    width: 14%;
+  }
+}
+
 .menu-card-menu-4 .menu-card__header {
-  font-family: 'KaushanScript-Regular';
+  font-family: 'KaushanScript';
   color: #76c158;
   background: -webkit-gradient(linear, left top, right top, from(#76c158), to(#c2db76));
   background: linear-gradient(to right, #76c158 0%, #c2db76 100%);
