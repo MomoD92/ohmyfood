@@ -110,10 +110,10 @@ $duration-animation: 80ms;
 /* MEDIA QUERY */
 
 $breakpoints: (
-    'small': ( min-width: 768px ),
-    'medium':(min-width: 992px ),
-    'large': (min-width: 1200px ),
-    'x-large': (min-width: 1400px ),
+    'small': ( max-width: 768px ),
+    'medium':(max-width: 992px ),
+    'large': (max-width: 1200px ),
+    'x-large': (max-width: 1400px ),
 );
 
 /* MIXINS*/
@@ -320,13 +320,12 @@ article {
     justify-content: space-between;
     align-content: space-between;
     margin: 0 auto;
-    padding: 2em;
+    //padding: 2em;
     width: 100%;
     height: auto;
     @include breakpoint(large) {
-        width: 60%;
+        width: 80%;
     }
-
     &__item{
         display: flex;
         flex-wrap: wrap;
@@ -339,15 +338,12 @@ article {
         border-radius: 0.3em;
         box-shadow: 0 0 10px 0 rgba(152, 153, 151, 0.6);
         transition: box-shadow calc(#{$duration-transition}*1.5) ease-in-out;
-        @include breakpoint(small) {
-            width: 80%;
-        }
-        @include breakpoint(medium) {
-            width: 45%;
-            height: 70vmin;
-        }
-
-        &:hover{
+        
+       @include breakpoint(small) {
+            width: 60%;
+          }
+         
+      &:hover{
             box-shadow: 0 0 10px 0 rgba(152, 153, 151, 1);
         }
         &--link{
@@ -464,18 +460,10 @@ article {
     width: 90%;
     box-shadow: 0 0 10px 0 rgba(152,153,151,0.6);
     @include breakpoint(small) {
-        padding: 3em;
-        width: 80%;
+        padding: 2em;
+        width: 100%;
     }
-    @include breakpoint(medium) {
-        padding: 4em;
-        width: 70%;
-    }
-    @include breakpoint(large) {
-        padding: 5em;
-        width: 60%;
-    }
-
+    
     &-menu-1{
         font-family: 'Kalam-Regular';
         color: $color-menu-1-text;
@@ -503,7 +491,7 @@ article {
          color: $color-menu-2-text;
          background-color: $color-menu-2-bg;
          .menu-card__header{
-             padding-bottom: 3em;
+             padding-bottom: 2em;
              font-family: 'CroissantOne-Regular';
              color: $color-menu-2-text;
              background: linear-gradient(
@@ -519,6 +507,7 @@ article {
              margin-right: 0;
 
          }
+    
     }
     &-menu-3{
         font-family: 'Tillana-Regular';
@@ -541,7 +530,7 @@ article {
                     font-size: scut-rem(48px);
                 }
                 @include breakpoint(large) {
-                    font-size: scut-rem(58px);
+                    font-size: scut-rem(30px);
                 }
             }
         }
@@ -549,7 +538,7 @@ article {
             margin-left: 0;
             margin-right: 0;
             @include breakpoint(x-large) {
-                margin-left: 3em;
+               margin-left: 3em;
                 margin-right: 3em;
             }
         }
