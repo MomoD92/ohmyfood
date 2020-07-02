@@ -190,6 +190,12 @@ h2 {
   line-height: 3;
 }
 
+@media (max-width: 768px) {
+  h2 {
+    line-height: 2;
+  }
+}
+
 h3 {
   padding-top: 1.125rem;
   font-size: 1.75rem;
@@ -266,7 +272,7 @@ article {
 
 @media (max-width: 1200px) {
   article {
-    width: 60%;
+    width: 75%;
   }
 }
 
@@ -322,6 +328,7 @@ article__section {
 
 @media (max-width: 768px) {
   .footer__infos--link {
+    padding: 0.8em 2em;
     font-size: 1.125rem;
   }
 }
@@ -411,7 +418,7 @@ article__section {
 
 @media (max-width: 1200px) {
   .nav-card {
-    width: 80%;
+    width: 100%;
   }
 }
 

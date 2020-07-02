@@ -162,6 +162,10 @@ li{
 h2{
     font-size: scut-rem(28px);
     line-height: 3;
+    @include breakpoint(small) {
+    line-height: 2;
+       
+    }
 }
 h3{
     padding-top: scut-rem(18px);
@@ -220,7 +224,7 @@ article {
         width: 70%;
     }
     @include breakpoint(large) {
-        width: 60%;
+        width: 75%;
     }
     &__section{
         padding-bottom: 2em;
@@ -256,7 +260,7 @@ article {
             animation-timing-function: linear;
         }   
         @include breakpoint(small) {
-             //padding: 0.8em 2em;
+             padding: 0.8em 2em;
              font-size: scut-rem(18px);
             //transform: translate(2px, 0);  
          }
@@ -330,7 +334,7 @@ article {
     width: 90%;
     height: auto;
     @include breakpoint(large) {
-        width: 80%;
+        width: 100%;
     }
     &__item{
         display: flex;
