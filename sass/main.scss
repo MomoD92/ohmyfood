@@ -260,7 +260,7 @@ article {
             animation-timing-function: linear;
         }   
         @include breakpoint(small) {
-             padding: 0.8em 2em;
+             padding: 0em;
              font-size: scut-rem(18px);
             //transform: translate(2px, 0);  
          }

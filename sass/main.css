@@ -328,7 +328,7 @@ article__section {
 
 @media (max-width: 768px) {
   .footer__infos--link {
-    padding: 0.8em 2em;
+    padding: 0em;
     font-size: 1.125rem;
   }
 }
