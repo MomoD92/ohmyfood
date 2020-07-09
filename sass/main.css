@@ -633,7 +633,7 @@ article__section {
 
 @media (max-width: 768px) {
   .menu-card-menu-1 {
-    width: 100%;
+    width: 90%;
     padding: 0em;
   }
   .menu-card-menu-1 img {
@@ -655,7 +655,7 @@ article__section {
 
 @media (max-width: 768px) {
   .menu-card-menu-2 {
-    width: 100%;
+    width: 90%;
     padding: 0em;
   }
   .menu-card-menu-2 img {
@@ -694,7 +694,7 @@ article__section {
 
 @media (max-width: 768px) {
   .menu-card-menu-3 {
-    width: 100%;
+    width: 90%;
     padding: 0em;
   }
   .menu-card-menu-3 img {
@@ -764,7 +764,7 @@ article__section {
 
 @media (max-width: 768px) {
   .menu-card-menu-4 {
-    width: 100%;
+    width: 90%;
     padding: 0em;
   }
   .menu-card-menu-4 img {
