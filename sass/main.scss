@@ -493,7 +493,15 @@ article {
             display: flex;
             flex-direction: column;
             align-items: center;
-                }           
+                }
+                @include breakpoint(small) {
+                    img{
+                        width: 14%;
+                    }
+                    width: 100%;
+                    padding: 0em;
+                }
+                        
         }
 
     &-menu-2 {

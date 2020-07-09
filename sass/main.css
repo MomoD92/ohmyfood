@@ -631,6 +631,16 @@ article__section {
           align-items: center;
 }
 
+@media (max-width: 768px) {
+  .menu-card-menu-1 {
+    width: 100%;
+    padding: 0em;
+  }
+  .menu-card-menu-1 img {
+    width: 14%;
+  }
+}
+
 .menu-card-menu-2 {
   font-family: 'Baskerville';
   color: #c77529;
