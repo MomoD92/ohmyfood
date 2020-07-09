@@ -1,0 +1,129 @@
+.nav-card{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+    margin: 0 auto;
+    padding: 2em;
+    width: 90%;
+    height: auto;
+    @include breakpoint(large) {
+        width: 80%;
+    }
+    &__item{
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+        width: 40%;
+        height: 80vmin;
+        margin: 2em auto;
+        text-align: center;
+        overflow: hidden;
+        border-radius: 0.3em;
+        box-shadow: 0 0 10px 0 rgba(152, 153, 151, 0.6);
+        transition: box-shadow calc(#{$duration-transition}*1.5) ease-in-out;
+        
+       @include breakpoint(small) {
+            width: 100%;
+          }
+         
+      &:hover{
+            box-shadow: 0 0 10px 0 rgba(152, 153, 151, 1);
+        }
+        &--link{
+            position: absolute;
+            top:50%;
+            left:50%;
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1);
+            transition: all $duration-transition ease-in-out;
+            &:hover{
+                opacity: 0.6;
+                 transform: translate(-50%,-50%) scale(1.19);
+            }
+        }
+        &--subtitle{
+            font-size: scut-rem(24px);
+            line-height: 1.2;
+            @include breakpoint(small) {
+                font-size: scut-rem(28px);
+            }
+            @include breakpoint(medium) {
+                line-height: 2;
+            }
+        }
+        &--menu-1{
+            background-color: $color-menu-1-bg;
+            .nav-card__item--title,
+            .nav-card__item--subtitle {
+                color: $color-menu-1-text;
+
+            }
+            .nav-card__item--title{
+                font-family: 'Devonshire';
+            }
+            .nav-card__item--subtitle {
+                font-family: 'Tillana';
+                text-transform: uppercase;
+                font-weight: 700;
+            }
+       }
+      &--menu-2 {
+            background-color: $color-menu-2-bg;
+            .nav-card__item--title {
+                font-family: 'CroissantOne';
+                font-size: scut-rem(18px);
+                color: $color-menu-2-text;
+                background: linear-gradient(
+                    to right,
+                    $color-menu-2-gradient-start 0%,
+                    $color-menu-2-gradient-end 100%
+                );
+               -webkit-text-fill-color:transparent;
+               -webkit-background-clip: text;
+            }
+            .nav-card__item--subtitle{
+                font-family: 'LibreBaskerville';
+                color: $color-menu-2-text;
+            }
+      }
+      &--menu-3 {
+           background-color: $color-menu-3-bg;
+           .nav-card__item--title{
+               font-family: 'Parisienne';
+               color:$color-menu-3-text;
+               background: linear-gradient(
+                   to right,
+                   $color-menu-3-gradient-start 0%,
+                   $color-menu-3-gradient-end 100%
+               );
+               -webkit-background-clip: text;
+               -webkit-text-fill-color: transparent;
+               
+        }
+        .nav-card__item--subtitle {
+            font-family: 'Tillana';
+            color: $color-menu-3-3-text;
+        }
+      }
+      &--menu-4{
+          background: $color-menu-3-bg;
+          .nav-card__item--title{
+              font-family: 'KaushanScript';
+              color: $color-menu-4-text;
+              background: linear-gradient(
+                  to right,
+                  $color-menu-4-gradient-start 0%,
+                  $color-menu-4-gradient-end 100%
+              );
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+          }
+          .nav-card__item--subtitle {
+              font-family: 'Tillana';
+              color: $color-menu-4-text;
+          }
+      } 
+    }
+      
+}

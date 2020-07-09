@@ -1,0 +1,18 @@
+article {
+    width: 80%;
+    margin: 3em auto 4em;
+    text-align: justify;
+    @include breakpoint(small) {
+        width: 80%;
+
+    }
+    @include breakpoint(medium) {
+        width: 70%;
+    }
+    @include breakpoint(large) {
+        width: 75%;
+    }
+    &__section{
+        padding-bottom: 2em;
+    }
+}

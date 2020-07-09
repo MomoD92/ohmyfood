@@ -1,0 +1,16 @@
+h2{
+    font-size: scut-rem(28px);
+    line-height: 3;
+    @include breakpoint(small) {
+    line-height: 2;
+       
+    }
+}
+h3{
+    padding-top: scut-rem(18px);
+    font-size: scut-rem(28px);
+    line-height: 1.5;
+}
+p{
+    font-size:scut-rem(16px) ;
+}

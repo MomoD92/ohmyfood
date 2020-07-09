@@ -1,0 +1,80 @@
+/* color base */
+
+$color-primary: #fff;
+$color-secondary: #579c87;
+$color-link: #f3c74a;
+
+/* color menu 1 */
+$color-menu-1-bg:#fcdfdb;
+$color-menu-1-text:#3b1519;
+/* color menu 2 */
+$color-menu-2-bg:#fff5fe;
+$color-menu-2-text:#c77529;
+$color-menu-2-2-text:#a86698;
+$color-menu-2-3-text:#6a56a5;
+$color-menu-2-gradient-start:$color-menu-2-text;
+$color-menu-2-gradient-end:$color-menu-2-3-text;
+/* color menu 3 */
+$color-menu-3-bg:#edefef;
+$color-menu-3-text:#215de9;
+$color-menu-3-3-text:#0887fb;
+$color-menu-3-gradient-start:$color-menu-3-text;
+$color-menu-3-gradient-end:$color-menu-3-3-text;
+/* color menu 4 */
+$color-menu-4-bg:#fdfffd;
+$color-menu-4-text:#76c158;
+$color-menu-4-gradient-start:$color-menu-4-text;
+$color-menu-4-gradient-end:#c2db76;
+
+/* color other */
+$color-black: #070504;
+$color-white: #fff;
+$lighter:lighten( $color-link, 0.7);
+
+// FONT SIZE BASE PX
+$scut-rem-base: 16 !default;
+
+// Animation 
+$duration-transition: 0.8s;
+$duration-animation: 80ms;
+
+/* ANIMATION */
+
+     // animation for dots
+
+@keyframes blink {
+    0%, 60%, 100% {
+              opacity: 0.4;
+              transform: initial;
+    }
+    30% {
+        opacity: 1;
+        transform: translateY(-15px) scale(1.8);
+    }
+}
+    
+     // animation for footer links
+
+@keyframes wiggle {
+    0% {
+        transform: translate(2px, 0);
+    }
+    45% {
+        transform: translate(-2px, 0) rotate(-2deg);
+    }
+    55% {
+        transform: rotate(2deg);
+    }
+    100%{
+        transform: translate(2px, 0);
+    }
+}
+
+/* MEDIA QUERY */
+
+$breakpoints: (
+    'small': ( max-width: 768px ),
+    'medium':(max-width: 992px ),
+    'large': (max-width: 1200px ),
+    'x-large': (max-width: 1400px ),
+);

@@ -1,0 +1,28 @@
+.header {
+    background-color: $color-secondary;
+    &__heading {
+        padding: 0.2em;
+        text-align: center;
+        font-size: scut-rem(34px);
+        font-weight: 800;
+        @include breakpoint(small) {
+            font-size: scut-rem(38px);
+        }
+        @include breakpoint(medium) {
+            font-size: scut-rem(42px);
+        }
+        @include breakpoint(large){
+            font-size: scut-rem(48px);
+        }
+    }
+    &__heading--link {
+         color: $color-link;
+         transition: text-shadow $duration-transition ease-in-out;
+         &:hover {
+            text-shadow: 0 0 5px $color-black, 0 0 10px $color-white,
+            0 0 20px $lighter, 0 0 30px $lighter, 0 0 40px $lighter, 
+            0 0 55px $lighter, 0 0 75px $lighter;
+            
+         }
+    }
+}

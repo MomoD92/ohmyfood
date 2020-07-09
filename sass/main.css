@@ -49,47 +49,6 @@ td:not([align]), th:not([align]) {
   text-align: left;
 }
 
-@font-face {
-  font-family: "OpenSans";
-  src: url(../font-face/OpenSans.ttf);
-}
-
-@font-face {
-  font-family: "Devonshire";
-  src: url(../font-face/Devonshire.ttf);
-}
-
-@font-face {
-  font-family: "CroissantOne";
-  src: url(../font-face/CroissantOne.ttf);
-}
-
-@font-face {
-  font-family: "LibreBaskerville";
-  src: url(../font-face/LibreBaskerville.ttf);
-}
-
-@font-face {
-  font-family: "Parisienne";
-  src: url(../font-face/Parisienne.ttf);
-}
-
-@font-face {
-  font-family: "KaushanScript";
-  src: url(../font-face/KaushanScript.ttf);
-}
-
-@font-face {
-  font-family: "Kalam";
-  src: url(../font-face/Kalam.ttf);
-}
-
-@font-face {
-  font-family: "Tillana";
-  src: url(../font-face/Tillana.ttf);
-}
-
-/***  VARIABLE  ***/
 /* color base */
 /* color menu 1 */
 /* color menu 2 */
@@ -161,9 +120,46 @@ td:not([align]), th:not([align]) {
 }
 
 /* MEDIA QUERY */
-/* MIXINS*/
-/* FUNCTION */
-/* BASE */
+@font-face {
+  font-family: "OpenSans";
+  src: url(../font-face/OpenSans.ttf);
+}
+
+@font-face {
+  font-family: "Devonshire";
+  src: url(../font-face/Devonshire.ttf);
+}
+
+@font-face {
+  font-family: "CroissantOne";
+  src: url(../font-face/CroissantOne.ttf);
+}
+
+@font-face {
+  font-family: "LibreBaskerville";
+  src: url(../font-face/LibreBaskerville.ttf);
+}
+
+@font-face {
+  font-family: "Parisienne";
+  src: url(../font-face/Parisienne.ttf);
+}
+
+@font-face {
+  font-family: "KaushanScript";
+  src: url(../font-face/KaushanScript.ttf);
+}
+
+@font-face {
+  font-family: "Kalam";
+  src: url(../font-face/Kalam.ttf);
+}
+
+@font-face {
+  font-family: "Tillana";
+  src: url(../font-face/Tillana.ttf);
+}
+
 body {
   font-family: 'OpenSans',Arial, Helvetica, sans-serif;
   font-size: 16px;
@@ -184,7 +180,6 @@ li {
   padding-top: 1.125rem;
 }
 
-/* TYPO */
 h2 {
   font-size: 1.75rem;
   line-height: 3;
@@ -206,8 +201,49 @@ p {
   font-size: 1rem;
 }
 
-/* header */
-.header, .footer, .btn--soon {
+.btn {
+  text-align: center;
+  margin-bottom: 6em;
+}
+
+.btn--soon {
+  position: relative;
+  margin: 0 auto;
+  padding: 0.5em 3.5em 0.5em 3.5em;
+  opacity: 0.9;
+  font-size: 20px;
+  color: #f3c74a;
+  border-radius: 0.4em;
+}
+
+.btn span {
+  position: absolute;
+  right: 1.5em;
+  bottom: 0.25em;
+  font-size: 33px;
+  -webkit-animation-name: blink;
+          animation-name: blink;
+  -webkit-animation-duration: 1.4s;
+          animation-duration: 1.4s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+.btn span:nth-child(2) {
+  right: 1.2em;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+.btn span:nth-child(3) {
+  right: .9em;
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+.header, .btn--soon, .footer {
   background-color: #579c87;
 }
 
@@ -246,12 +282,10 @@ p {
   text-shadow: 0 0 5px #070504, 0 0 10px #fff, 0 0 20px #f3c84d, 0 0 30px #f3c84d, 0 0 40px #f3c84d, 0 0 55px #f3c84d, 0 0 75px #f3c84d;
 }
 
-/* CONTAINER */
 .container {
   width: 100%;
 }
 
-/* article */
 article {
   width: 80%;
   margin: 3em auto 4em;
@@ -280,7 +314,6 @@ article__section {
   padding-bottom: 2em;
 }
 
-/* footer */
 .footer {
   width: 100%;
   padding: 0.5em 0;
@@ -355,50 +388,6 @@ article__section {
   color: #f3c74a;
 }
 
-/* compenent btn */
-.btn {
-  text-align: center;
-  margin-bottom: 6em;
-}
-
-.btn--soon {
-  position: relative;
-  margin: 0 auto;
-  padding: 0.5em 3.5em 0.5em 3.5em;
-  opacity: 0.9;
-  font-size: 20px;
-  color: #f3c74a;
-  border-radius: 0.4em;
-}
-
-.btn span {
-  position: absolute;
-  right: 1.5em;
-  bottom: 0.25em;
-  font-size: 33px;
-  -webkit-animation-name: blink;
-          animation-name: blink;
-  -webkit-animation-duration: 1.4s;
-          animation-duration: 1.4s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-}
-
-.btn span:nth-child(2) {
-  right: 1.2em;
-  -webkit-animation-delay: 0.2s;
-          animation-delay: 0.2s;
-}
-
-.btn span:nth-child(3) {
-  right: .9em;
-  -webkit-animation-delay: 0.4s;
-          animation-delay: 0.4s;
-}
-
-/* Page home */
 .nav-card {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -562,7 +551,6 @@ article__section {
   color: #76c158;
 }
 
-/* PAGE MENUS */
 .menu__section {
   margin-top: 2em;
   text-align: center;

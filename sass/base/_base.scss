@@ -1,0 +1,16 @@
+body{
+    font-family: 'OpenSans',Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 2;
+    background-color: $color-primary;
+}
+img{
+    width: 33%;
+    height: 40px;
+}
+a{
+    text-decoration: none;
+}
+li{
+    padding-top: scut-rem(18px);
+}

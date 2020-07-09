@@ -1,0 +1,51 @@
+.footer {
+    width: 100%;
+    padding: 0.5em 0;
+    left: 0;
+    bottom: 0;
+    @extend .header;
+    @include breakpoint(small) {
+        justify-content: space-between;
+        padding: 0;
+    }
+    &__infos{
+        padding: 0 2em 0.2em;
+        font-size: 16px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        @include breakpoint(small) {
+            padding: 0em;
+           
+        }
+
+        &--link{
+         color: $color-link;
+         &:hover {
+            animation: wiggle $duration-animation infinite;
+            animation-timing-function: linear;
+        }   
+        @include breakpoint(small) {
+             padding: 0em;
+             font-size: scut-rem(18px);
+            //transform: translate(2px, 0);  
+         }
+         @include breakpoint(medium) {
+             font-size: scut-rem(20px);
+            
+          }
+          @include breakpoint(large) {
+              font-size: scut-rem(22px);
+              &:hover {
+                animation: wiggle $duration-animation infinite;
+                animation-timing-function: linear;
+            }   
+             
+          }
+         }
+
+      a{
+        color: $color-link;
+    }
+  } 
+}

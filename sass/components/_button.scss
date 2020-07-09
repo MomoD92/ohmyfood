@@ -1,0 +1,35 @@
+.btn {
+    text-align: center;
+    margin-bottom: 6em;
+    &--soon{
+        position: relative;
+        margin: 0 auto;
+        padding: 0.5em 3.5em 0.5em 3.5em;
+        opacity: 0.9;
+        font-size: 20px;
+        color: $color-link;
+        @extend .header; //Extend color and background
+        border-radius: 0.4em;
+    }
+    // animation for dots
+    span {
+          position: absolute;
+          right: 1.5em;
+          bottom: 0.25em;
+          font-size: 33px;
+          
+          animation-name: blink;
+          animation-duration: 1.4s;
+          animation-iteration-count: infinite;
+                     animation-fill-mode: both;
+          &:nth-child(2) {
+                          right: 1.2em;
+                animation-delay: 0.2s;
+          }
+          &:nth-child(3) {
+                    right: .9em;
+                animation-delay: 0.4s;
+                
+          }
+    }
+}
