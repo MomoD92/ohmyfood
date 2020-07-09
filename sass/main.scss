@@ -350,7 +350,7 @@ article {
         transition: box-shadow calc(#{$duration-transition}*1.5) ease-in-out;
         
        @include breakpoint(small) {
-            width: 80%;
+            width: 100%;
           }
          
       &:hover{

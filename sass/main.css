@@ -445,7 +445,7 @@ article__section {
 
 @media (max-width: 768px) {
   .nav-card__item {
-    width: 80%;
+    width: 100%;
   }
 }
 
