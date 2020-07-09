@@ -1,36 +1,36 @@
 @import '../libs/reset.scss';
 @font-face{
     font-family: "OpenSans";
-    src: url(/font-face/OpenSans.ttf);
+    src: url(../font-face/OpenSans.ttf);
 }
 
 @font-face{
     font-family: "Devonshire";
-    src: url(/font-face/Devonshire.ttf);
+    src: url(../font-face/Devonshire.ttf);
 }
 @font-face{
     font-family:"CroissantOne";
-    src: url(/font-face/CroissantOne.ttf);
+    src: url(../font-face/CroissantOne.ttf);
 }
 @font-face{
     font-family:"LibreBaskerville";
-    src: url(/font-face/LibreBaskerville.ttf);
+    src: url(../font-face/LibreBaskerville.ttf);
 }
 @font-face{
     font-family:"Parisienne";
-    src: url(/font-face/Parisienne.ttf);
+    src: url(../font-face/Parisienne.ttf);
 }
 @font-face{
     font-family:"KaushanScript";
-    src: url(/font-face/KaushanScript.ttf);
+    src: url(../font-face/KaushanScript.ttf);
 }
 @font-face{
     font-family:"Kalam";
-    src: url(/font-face/Kalam.ttf);
+    src: url(../font-face/Kalam.ttf);
 }
 @font-face{
     font-family:"Tillana";
-    src: url(/font-face/Tillana.ttf);
+    src: url(../font-face/Tillana.ttf);
 }
 
 /***  VARIABLE  ***/
@@ -334,7 +334,7 @@ article {
     width: 90%;
     height: auto;
     @include breakpoint(large) {
-        width: 100%;
+        width: 80%;
     }
     &__item{
         display: flex;
